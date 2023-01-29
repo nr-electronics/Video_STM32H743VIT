@@ -98,13 +98,12 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_MDMA_Init();
   MX_LTDC_Init();
   MX_QUADSPI_Init();
   MX_CRC_Init();
-  MX_LIBJPEG_Init();
   MX_DMA2D_Init();
-  MX_MDMA_Init();
-
+  MX_LIBJPEG_Init();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
