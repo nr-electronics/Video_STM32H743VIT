@@ -66,7 +66,7 @@ void HAL_JPEG_MspInit(JPEG_HandleTypeDef* jpegHandle)
     hmdma_jpeg_infifo_th.Instance = MDMA_Channel7;
     hmdma_jpeg_infifo_th.Init.Request = MDMA_REQUEST_JPEG_INFIFO_TH;
     hmdma_jpeg_infifo_th.Init.TransferTriggerMode = MDMA_BUFFER_TRANSFER;
-    hmdma_jpeg_infifo_th.Init.Priority = MDMA_PRIORITY_HIGH;
+    hmdma_jpeg_infifo_th.Init.Priority = MDMA_PRIORITY_LOW;
     hmdma_jpeg_infifo_th.Init.Endianness = MDMA_LITTLE_ENDIANNESS_PRESERVE;
     hmdma_jpeg_infifo_th.Init.SourceInc = MDMA_SRC_INC_BYTE;
     hmdma_jpeg_infifo_th.Init.DestinationInc = MDMA_DEST_INC_DISABLE;
@@ -94,7 +94,7 @@ void HAL_JPEG_MspInit(JPEG_HandleTypeDef* jpegHandle)
     hmdma_jpeg_outfifo_th.Instance = MDMA_Channel6;
     hmdma_jpeg_outfifo_th.Init.Request = MDMA_REQUEST_JPEG_OUTFIFO_TH;
     hmdma_jpeg_outfifo_th.Init.TransferTriggerMode = MDMA_BUFFER_TRANSFER;
-    hmdma_jpeg_outfifo_th.Init.Priority = MDMA_PRIORITY_HIGH;
+    hmdma_jpeg_outfifo_th.Init.Priority = MDMA_PRIORITY_LOW;
     hmdma_jpeg_outfifo_th.Init.Endianness = MDMA_LITTLE_ENDIANNESS_PRESERVE;
     hmdma_jpeg_outfifo_th.Init.SourceInc = MDMA_SRC_INC_DISABLE;
     hmdma_jpeg_outfifo_th.Init.DestinationInc = MDMA_DEST_INC_BYTE;

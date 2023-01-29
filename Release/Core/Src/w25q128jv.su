@@ -1,9 +1,0 @@
-../Core/Src/w25q128jv.c:85:19:W25Q128JV_AutoPollingMemReady	96	static
-../Core/Src/w25q128jv.c:126:19:W25Q128JV_Init	88	static
-../Core/Src/w25q128jv.c:302:19:W25Q128JV_EraseBlock	160	static
-../Core/Src/w25q128jv.c:350:19:W25Q128JV_Write	168	static
-../Core/Src/w25q128jv.c:406:19:W25Q128JV_ReadQuad	80	static
-../Core/Src/w25q128jv.c:457:19:W25Q128JV_Read1Line	80	static
-../Core/Src/w25q128jv.c:508:19:W25Q128JV_ReadFast1Line	80	static
-../Core/Src/w25q128jv.c:554:19:W25Q128JV_ReadDual	80	static
-../Core/Src/w25q128jv.c:602:19:W25Q128JV_MemoryMapped	80	static
