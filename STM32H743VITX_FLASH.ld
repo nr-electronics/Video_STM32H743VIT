@@ -197,7 +197,13 @@ SECTIONS
 	
 
 	
-	
+  TouchGFX_Framebuffer (NOLOAD) :
+ 	{
+		*(TouchGFX_Framebuffer TouchGFX_Framebuffer.*)
+		*(.gnu.linkonce.r.*)
+        . = ALIGN(0x32);
+	} >RAM_D2
+		
 	Video_RGB_Buffer (NOLOAD) :
  	{
 		*(Video_RGB_Buffer Video_RGB_Buffer.*)
