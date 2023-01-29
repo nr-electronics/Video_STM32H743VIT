@@ -2,4 +2,4 @@
 
 На какой отладочной плате работаем:
 
-![](https://github.com/nr-electronics/Video_STM32H743VIT/tree/main/STM32H743VIT6.jpg)
+![](https://github.com/nr-electronics/Video_STM32H743VIT/blob/main/STM32H743VIT6.jpg)
