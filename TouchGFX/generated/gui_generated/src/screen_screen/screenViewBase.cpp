@@ -4,6 +4,7 @@
 #include <gui_generated/screen_screen/screenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <videos/VideoDatabase.hpp>
+#include <BitmapDatabase.hpp>
 
 screenViewBase::screenViewBase()
 {
@@ -16,8 +17,12 @@ screenViewBase::screenViewBase()
     video1.setVideoData(video_SampleVideo2_216x216_bin_start, video_SampleVideo2_216x216_bin_length);
     video1.play();
 
+    button1.setXY(23, 78);
+    button1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+
     add(__background);
     add(video1);
+    add(button1);
 }
 
 void screenViewBase::setupScreen()
