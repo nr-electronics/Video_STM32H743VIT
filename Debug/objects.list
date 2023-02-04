@@ -116,6 +116,8 @@
 "./TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o"
 "./TouchGFX/generated/gui_generated/src/screen_screen/screenViewBase.o"
 "./TouchGFX/generated/images/src/BitmapDatabase.o"
+"./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.o"
+"./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.o"
 "./TouchGFX/generated/texts/src/LanguageGb.o"
 "./TouchGFX/generated/texts/src/Texts.o"
 "./TouchGFX/generated/texts/src/TypedTextDatabase.o"

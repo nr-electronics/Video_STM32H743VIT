@@ -46,6 +46,7 @@ TouchGFX/generated/fonts/src \
 TouchGFX/generated/gui_generated/src/common \
 TouchGFX/generated/gui_generated/src/screen_screen \
 TouchGFX/generated/images/src \
+TouchGFX/generated/images/src/__designer \
 TouchGFX/generated/texts/src \
 TouchGFX/generated/videos/obj \
 TouchGFX/gui/src/common \

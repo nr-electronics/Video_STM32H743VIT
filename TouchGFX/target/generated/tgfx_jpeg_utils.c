@@ -1137,7 +1137,7 @@ static uint32_t TGFX_JPEG_MCU_YCbCr420_ARGB_ConvertBlocks(uint8_t *pInBuffer,
     yRef = ((currentMCU *16) % JPEG_ConvertorParams.WidthExtend);
 
     //tgfx: Set stride to the full width of the RGB Buffer, and not the video itself.
-    JPEG_ConvertorParams.ScaledWidth = 216 * 2;
+    JPEG_ConvertorParams.ScaledWidth = 256 * 2;
 
     refline = JPEG_ConvertorParams.ScaledWidth * xRef + (JPEG_BYTES_PER_PIXEL*yRef);
 
@@ -1154,7 +1154,7 @@ static uint32_t TGFX_JPEG_MCU_YCbCr420_ARGB_ConvertBlocks(uint8_t *pInBuffer,
         pLum = pInBuffer + 128;
       }
 
-      if(refline < JPEG_ConvertorParams.ScaledWidth * 216)
+      if(refline < JPEG_ConvertorParams.ScaledWidth * 256)
       {
         pOutAddr = pOutBuffer + refline;
         pOutAddr2 = pOutAddr + JPEG_ConvertorParams.ScaledWidth;

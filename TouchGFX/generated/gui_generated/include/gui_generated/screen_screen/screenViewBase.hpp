@@ -9,7 +9,7 @@
 #include <gui/screen_screen/screenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/VideoWidget.hpp>
-#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
 
 class screenViewBase : public touchgfx::View<screenPresenter>
 {
@@ -28,7 +28,8 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::VideoWidget video1;
-    touchgfx::Button button1;
+    touchgfx::ToggleButton toggleButton1;
+    touchgfx::ToggleButton toggleButton2;
 
 private:
 

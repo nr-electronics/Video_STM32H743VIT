@@ -17,6 +17,7 @@ RM := rm -rf
 -include TouchGFX/gui/src/common/subdir.mk
 -include TouchGFX/generated/videos/obj/subdir.mk
 -include TouchGFX/generated/texts/src/subdir.mk
+-include TouchGFX/generated/images/src/__designer/subdir.mk
 -include TouchGFX/generated/images/src/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/common/subdir.mk
@@ -95,8 +96,8 @@ all: main-build
 main-build: Video.elf secondary-outputs
 
 # Tool invocations
-Video.elf Video.map: $(OBJS) $(USER_OBJS) F:\My_Projects\MicroControllers\STM\Projects\Video_STM32H743VIT\STM32H743VITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "Video.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"F:\My_Projects\MicroControllers\STM\Projects\Video_STM32H743VIT\STM32H743VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Video.map" -Wl,--gc-sections -static -L"F:\My_Projects\MicroControllers\STM\Projects\Video_STM32H743VIT\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Video.elf Video.map: $(OBJS) $(USER_OBJS) E:\Workspace\Video_Vrode_Poloski\Video\STM32H743VITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "Video.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"E:\Workspace\Video_Vrode_Poloski\Video\STM32H743VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Video.map" -Wl,--gc-sections -static -L"E:\Workspace\Video_Vrode_Poloski\Video\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

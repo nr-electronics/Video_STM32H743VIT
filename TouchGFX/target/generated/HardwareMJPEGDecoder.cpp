@@ -61,7 +61,7 @@ extern "C"
 #define MCU_CHROMA_420_SIZE_BYTES   ((uint32_t)384)
 
 #define CHUNK_SIZE_IN  ((uint32_t)(1024*64))  //Max block size
-#define CHUNK_SIZE_OUT ((uint32_t)(MCU_CHROMA_420_SIZE_BYTES * (216 / MCU_WIDTH_PIXELS)))
+#define CHUNK_SIZE_OUT ((uint32_t)(MCU_CHROMA_420_SIZE_BYTES * (256 / MCU_WIDTH_PIXELS)))
 
 #define JPEG_BUFFER_EMPTY 0
 #define JPEG_BUFFER_FULL  1
@@ -415,7 +415,7 @@ void HardwareMJPEGDecoder::decodeMJPEGFrame(const uint8_t* const mjpgdata, const
       {
           JPEG_ConvertorParams.WidthExtend += 16 - (JPEG_ConvertorParams.WidthExtend % 16);
       }
-      JPEG_ConvertorParams.ScaledWidth = 216 * JPEG_ConvertorParams.bytes_pr_pixel;
+      JPEG_ConvertorParams.ScaledWidth = 256 * JPEG_ConvertorParams.bytes_pr_pixel;
       JPEG_ConvertorParams.MCU_pr_line = JPEG_ConvertorParams.WidthExtend / MCU_WIDTH_PIXELS;
       JPEG_ConvertorParams.LastLineHeight = 16 - (videoInfo.frame_height % MCU_HEIGHT_PIXELS);
 
@@ -748,7 +748,7 @@ void DMA2D_CopyBuffer(External_DMA2D_JobTypeDef& job)
   WRITE_REG(DMA2D->OMAR, (reinterpret_cast<uint32_t>(FrameBufferAddress) + refline));
 
   /* DMA2D OOR register configuration ------------------------------------------*/
-  WRITE_REG(DMA2D->OOR, 216 - (MCU_WIDTH_PIXELS * JPEG_ConvertorParams.MCU_pr_line));
+  WRITE_REG(DMA2D->OOR, 256 - (MCU_WIDTH_PIXELS * JPEG_ConvertorParams.MCU_pr_line));
 
   /* DMA2D FGOR register configuration -------------------------------------*/
   WRITE_REG(DMA2D->FGOR, 0);

@@ -9,20 +9,24 @@
 screenViewBase::screenViewBase()
 {
 
-    __background.setPosition(0, 0, 216, 216);
+    __background.setPosition(0, 0, 256, 256);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
-    video1.setPosition(0, 0, 216, 216);
+    video1.setPosition(20, 0, 216, 216);
     video1.setRepeat(true);
     video1.setVideoData(video_SampleVideo2_216x216_bin_start, video_SampleVideo2_216x216_bin_length);
     video1.play();
 
-    button1.setXY(23, 78);
-    button1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    toggleButton1.setXY(0, 216);
+    toggleButton1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+
+    toggleButton2.setXY(128, 216);
+    toggleButton2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
 
     add(__background);
     add(video1);
-    add(button1);
+    add(toggleButton1);
+    add(toggleButton2);
 }
 
 void screenViewBase::setupScreen()

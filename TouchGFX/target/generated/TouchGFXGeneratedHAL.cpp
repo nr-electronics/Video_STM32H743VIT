@@ -28,8 +28,8 @@
 
 HardwareMJPEGDecoder mjpegdecoder1;
 LOCATION_PRAGMA_NOLOAD("Video_RGB_Buffer")
-uint32_t videoRGBBuffer[23328] LOCATION_ATTRIBUTE_NOLOAD("Video_RGB_Buffer");
-DedicatedBufferController<1, 216, 216, 216*2U, Bitmap::RGB565> videoController;
+uint32_t videoRGBBuffer[32768] LOCATION_ATTRIBUTE_NOLOAD("Video_RGB_Buffer");
+DedicatedBufferController<1, 256, 256, 256*2U, Bitmap::RGB565> videoController;
 
 //Singleton Factory
 VideoController& VideoController::getInstance()
@@ -46,7 +46,7 @@ namespace
 {
     // Use the section "TouchGFX_Framebuffer" in the linker script to specify the placement of the buffer
     LOCATION_PRAGMA_NOLOAD("TouchGFX_Framebuffer")
-    uint32_t frameBuf[(216 * 216 * 2 + 3) / 4] LOCATION_ATTRIBUTE_NOLOAD("TouchGFX_Framebuffer");
+    uint32_t frameBuf[(256 * 256 * 2 + 3) / 4] LOCATION_ATTRIBUTE_NOLOAD("TouchGFX_Framebuffer");
     static volatile bool refreshRequested = false;
     static uint16_t lcd_int_active_line;
     static uint16_t lcd_int_porch_line;

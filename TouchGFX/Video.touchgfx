@@ -7,6 +7,7 @@
           {
             "Type": "Video",
             "Name": "video1",
+            "X": 20,
             "Width": 216,
             "Height": 216,
             "Sample": "Style4",
@@ -15,14 +16,24 @@
             "Loop": true
           },
           {
-            "Type": "Button",
-            "Name": "button1",
-            "X": 23,
-            "Y": 78,
-            "Width": 170,
-            "Height": 60,
-            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
-            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "Y": 216,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Style": "Style4"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2",
+            "X": 128,
+            "Y": 216,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
             "Style": "Style4"
           }
         ],
@@ -32,8 +43,8 @@
     "CustomContainerDefinitions": [],
     "Name": "MyApplication",
     "Resolution": {
-      "Width": 216,
-      "Height": 216
+      "Width": 256,
+      "Height": 256
     },
     "SelectedColorDepth": 16,
     "StartupScreenName": "screen",
@@ -53,8 +64,8 @@
     ],
     "AvailableResolutions": [
       {
-        "Width": 216,
-        "Height": 216
+        "Width": 256,
+        "Height": 256
       }
     ],
     "PhysicalButtons": [],
